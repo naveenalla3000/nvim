@@ -17,25 +17,11 @@ return {
             -- Only include this if you're using coc.nvim
             -- require('ufo').setup()
 
-            -- Option 2: Neovim LSP client folding
-            local capabilities = vim.lsp.protocol.make_client_capabilities()
-            capabilities.textDocument.foldingRange = {
-                dynamicRegistration = false,
-                lineFoldingOnly = true
-            }
-            local language_servers = require("lspconfig").util.available_servers()
-            for _, ls in ipairs(language_servers) do
-                require('lspconfig')[ls].setup({
-                    capabilities = capabilities
-                })
-            end
-            require('ufo').setup()
-
-            -- Option 3: Treesitter as a main provider
+            -- LSP foldingRange is merged into all clients via vim.lsp.config('*') in lsp/mason.lua.
             require('ufo').setup({
-                provider_selector = function(bufnr, filetype, buftype)
+                provider_selector = function(_bufnr, _filetype, _buftype)
                     return { 'treesitter', 'indent' }
-                end
+                end,
             })
         end
     }
