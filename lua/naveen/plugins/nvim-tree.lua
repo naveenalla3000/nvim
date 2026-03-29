@@ -13,16 +13,23 @@ return {
         width = 35,
         relativenumber = true,
       },
-      -- change folder arrow icons
       renderer = {
         indent_markers = {
           enable = true,
         },
+        -- Folder arrows: plain Unicode. File/git icons: nvim-web-devicons (Nerd Font) unless
+        -- vim.g.nvim_tree_show_file_icons = false in init.lua.
         icons = {
+          show = {
+            file = vim.g.nvim_tree_show_file_icons ~= false,
+            folder = true,
+            folder_arrow = true,
+            git = vim.g.nvim_tree_show_file_icons ~= false,
+          },
           glyphs = {
             folder = {
-              arrow_closed = "", -- arrow when folder is closed
-              arrow_open = "", -- arrow when folder is open
+              arrow_closed = "▸",
+              arrow_open = "▾",
             },
           },
         },

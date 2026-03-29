@@ -4,7 +4,6 @@
 
 This repository showcases my customized NeoVim setup, enhanced with various plugins and tools, along with resources, configurations, and tools specifically designed for Java, Python, and Web Developers to enhance productivity and coding efficiency.
 
-
 ## Features
 
 - **LSP**: Language Server Protocol client for enhanced language features.
@@ -22,7 +21,6 @@ To replicate my NeoVim setup, follow these steps:
 ## Keep Exploring
 
 Feel free to explore and modify the setup to fit your coding style. Happy coding!
-
 
 ![Screenshot 1](https://github.com/user-attachments/assets/f80a7bd8-532d-451c-9910-1044e36cb642)
 

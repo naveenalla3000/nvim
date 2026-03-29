@@ -21,6 +21,12 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
+--
+-- Icons (nvim-tree, lualine, Telescope): if you see "[?]" boxes, your terminal font has no Nerd icons.
+-- Fix: install a Nerd Font from https://www.nerdfonts.com/font-downloads (e.g. "JetBrainsMono Nerd Font",
+-- "MesloLGS NF") and set it as the terminal font.
+-- Cursor / VS Code: Settings → search "Terminal › Integrated: Font Family" → paste the font name.
+-- Temporary: in nvim-tree config set icons.show.file = false to hide only file-type glyphs.
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
